@@ -1,0 +1,397 @@
+/* General Styles */
+body {
+    background-image: url('Images/vhstable.jpg'); /* Path to your new image */
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Centering and Hidden Section Styling */
+.hidden {
+    display: none;
+}
+
+/* Common Section Title Styles */
+.section-title {
+    text-align: center; /* Center align */
+    margin-top: 0; /* No top margin */
+    margin-bottom: 20px; /* Space below */
+    font-size: 2.5em; /* Set size */
+    padding: 0.5em; /* Adjust padding */
+    background-color: rgba(249, 249, 249, 0.9); /* Light background */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Navigation Bar */
+.navbar {
+    position: absolute; /* Fixed to the top */
+    top: 0; /* Align to the top */
+    left: 0; /* Align to the left */
+    width: 100%; /* Full width */
+    z-index: 1000; /* Appear above other content */
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+    border-bottom: 1px solid #ccc; /* Bottom border */
+    padding: 10px 0; /* Padding around the buttons */
+    display: flex; /* Flexbox */
+    justify-content: center; /* Center horizontally */
+}
+
+    /* Navbar Links */
+    .navbar a {
+        text-decoration: none; /* No underline */
+        color: #555; /* Changed text color to dark grey */
+        margin: 0 15px; /* Margin between buttons */
+        padding: 8px 12px; /* Padding for clickable area */
+        border-radius: 4px; /* Rounded corners */
+        transition: background-color 0.3s; /* Smooth hover effect */
+    }
+
+        /* Hover Effect for Links */
+        .navbar a:hover {
+            background-color: rgba(100, 100, 100, 0.2); /* Change background on hover */
+        }
+
+/* Header Section */
+#header {
+    padding: 0;
+    margin-top: 0 auto 40px; /* Remove extra space above the header */
+}
+
+.header-section {
+    min-height: 100vh;
+    color: #333;
+    padding: 0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.header-content {
+    background-color: rgba(249, 249, 249, 0.9); /* Light background around text */
+    padding: 2em 3em; /* Add padding inside the background box */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    display: inline-block; /* Shrink background to fit content */
+}
+
+/* Button Styles */
+.button, .project-button, .source-code-button, .send-button, .social-button, .details-button {
+    position: relative;
+    display: inline-block;
+    padding: 0.7em 1.7em;
+    background: transparent;
+    color: #333; /* Changed text color to dark grey */
+    text-decoration: none;
+    border: 2px solid #333; /* Changed border color to dark grey */
+    border-radius: 5px;
+    margin: 0.5em;
+    font-size: 0.9em;
+    overflow: hidden;
+    transition: color 0.3s ease, background 0.3s ease;
+    cursor: pointer;
+    z-index: 1;
+}
+
+    .button::before, .project-button::before, .source-code-button::before, .send-button::before, .social-button::before, .details-button::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 100%;
+        background: #d3d3d3;
+        z-index: -1;
+        transition: width 0.4s ease;
+    }
+
+    .button:hover::before, .project-button:hover::before, .source-code-button:hover::before, .send-button:hover::before, .social-button:hover::before, .details-button:hover::before {
+        width: 100%;
+    }
+
+    .button:hover, .project-button:hover, .source-code-button:hover, .send-button:hover, .social-button:hover, .details-button:hover {
+        color: #fff;
+    }
+
+/* About Me Section */
+#about {
+    padding: 0;
+    margin: 80px auto 40px;
+}
+
+    /* Title Margin Adjustment */
+    #about h2 {
+        padding-top: 10px; /* Optional: Slight padding to add space within */
+        background-color: rgba(249, 249, 249, 0.9); /* Light background color */
+        padding: 0.5em 1em; /* Adjust padding to fit around the text */
+        display: inline-block; /* Shrink the background to fit the text */
+        border-radius: 8px; /* Rounded corners for the background box */
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    }
+
+/* About Me text styling */
+.about-text-container {
+    background-color: rgba(249, 249, 249, 0.9); /* Light background */
+    padding: 2em;
+    color: #333; /* Changed text color to dark grey */
+    text-align: center; /* Centers the text */
+    margin-top: 1em; /* Space between title and paragraph */
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Style for the h2 if not already set */
+.section-content h2 {
+    margin: 0 0 1em; /* Adjust margin for spacing */
+    font-size: 2.5em;
+    text-align: center;
+    color: #333; /* Changed text color to dark grey */
+    background-color: rgba(249, 249, 249, 0.9); /* Light background */
+    padding: 0.5em; /* Padding around the title */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Ensure content inside section is centered */
+.section-content {
+    padding-top: 80px; /* Adjust according to your navbar height */
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+}
+
+/* Resume Section */
+#resume {
+    padding-top: 80px; /* Adjust this value to move the section down */
+    padding-bottom: 80px;
+}
+
+    /* Title Styling */
+    #resume h2 {
+        text-align: center; /* Center align title */
+        background-color: rgba(249, 249, 249, 0.9); /* Light background color */
+        padding: 0.5em 1em; /* Adjust padding to fit around the text */
+        display: inline-block; /* Shrink the background to fit the text */
+        border-radius: 8px; /* Rounded corners for the background box */
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+        margin: 0 auto 40px; /* Center the title and add space below */
+    }
+
+    /* Adjust iframe height and width for better visibility */
+    #resume iframe {
+        height: 80vh; /* Set height to 80% of the viewport height */
+        width: 90%; /* Set width to 90% of the container */
+        max-width: 800px; /* Optional: maximum width for large screens */
+        border: none; /* Remove border */
+        margin: 0 auto; /* Center the iframe */
+        display: block; /* Ensure it behaves like a block element */
+    }
+
+/* Skills Section */
+#skills {
+    padding: 0; /* Remove internal padding to see if it helps */
+    margin: 50px auto 40px; /* 20px above, centered, and 40px below */
+}
+
+/* Skills Section Content */
+.skills-section {
+    padding: 2em 0; /* Keep some padding for internal spacing */
+    margin-bottom: 60px; /* Space below the title */
+}
+
+    /* Skills Section Title */
+    .skills-section h2 {
+        text-align: center; /* Center align title */
+        background-color: rgba(249, 249, 249, 0.9); /* Light background color */
+        padding: 0.5em 1em; /* Adjust padding to fit around the text */
+        display: inline-block; /* Shrink the background to fit the text */
+        border-radius: 8px; /* Rounded corners for the background box */
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+        margin: 0 auto 40px; /* No margin above, center title, space below */
+    }
+
+/* Skills Container */
+.skills-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 4em;
+    text-align: center;
+}
+
+/* Skill Item */
+.skill-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 150px;
+    padding: 2em 1em; /* Add padding around the logo and text */
+    background-color: rgba(249, 249, 249, 0.9); /* Light background */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    transition: transform 0.3s ease;
+}
+
+    .skill-item img {
+        width: 125px;
+        height: 125px;
+        object-fit: contain;
+        transition: transform 0.3s ease;
+    }
+
+        .skill-item img:hover {
+            transform: scale(1.1);
+        }
+
+    .skill-item p {
+        margin-top: 0.5em;
+        font-size: 1.1em;
+        color: #333; /* Changed text color to dark grey */
+    }
+
+/* Projects Section */
+#projects {
+    padding: 0; /* No extra space above */
+    margin: 80px auto 40px; /* Remove top margin for alignment with the navbar */
+}
+    /* Projects Section Title */
+    #projects h2 {
+        text-align: center; /* Center the title */
+        margin-top: 0; /* No top margin */
+        margin-bottom: 20px; /* Space below title */
+        font-size: 2.5em; /* Set this to match other titles */
+        padding: 0.5em; /* Adjust padding for background */
+        background-color: rgba(249, 249, 249, 0.9); /* Light background for the title */
+        border-radius: 8px; /* Rounded corners */
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    }
+
+/* Project Grid */
+.project-grid {
+    padding-top: 40px; /* Space between title and project items */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2em; /* Space between project items */
+}
+
+/* Project Item Styling */
+.project-item {
+    background-color: rgba(249, 249, 249, 0.9); /* Light background */
+    padding: 2em; /* Padding inside each project item */
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Center text in project items */
+    max-width: 300px; /* Set a max width for consistency */
+    flex-grow: 1; /* Allow items to grow */
+}
+
+/* Project Image */
+.project-image {
+    width: 100%; /* Full width */
+    height: auto; /* Maintain aspect ratio */
+    max-height: 200px; /* Limit height */
+    object-fit: contain; /* Fit without distortion */
+    border-radius: 8px; /* Rounded corners */
+}
+
+/* Project Details Content */
+.project-details-content {
+    background-color: rgba(255, 255, 255, 0.8); /* Light background */
+    padding: 1em; /* Padding around content */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+}
+
+/* Media Container */
+.media-container {
+    display: flex;
+    flex-direction: column; /* Stack vertically */
+    align-items: center; /* Center items */
+}
+
+    /* Responsive Video */
+    .media-container video {
+        width: 100%; /* Full width */
+        max-width: 600px; /* Max width */
+        max-height: 400px; /* Max height */
+        height: auto; /* Maintain aspect ratio */
+        margin: 20px 0; /* Margin around video */
+    }
+
+/* Project Details Container */
+.project-details-container {
+    display: flex;
+    justify-content: space-between; /* Space between columns */
+    align-items: flex-start; /* Align items to top */
+    margin-top: 1em; /* Space above */
+    gap: 1em; /* Space between columns */
+}
+
+/* Project Info and Role Styling */
+.project-info, .project-role {
+    flex: 1; /* Allow to take equal space */
+    padding: 1em; /* Inner padding */
+    background-color: rgba(240, 240, 240, 0.8); /* Light background */
+    border-radius: 5px; /* Rounded corners */
+}
+
+/* Divider Line */
+.divider {
+    width: 1px; /* Thin line */
+    background-color: rgba(0, 0, 0, 0.1); /* Light color */
+    margin: 0 1em; /* Space around */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .project-details-container {
+        flex-direction: column; /* Stack on smaller screens */
+    }
+
+    .divider {
+        display: none; /* Hide divider */
+    }
+}
+
+/* Contact Section */
+#contact {
+    padding: 0;
+    margin: 80px auto 40px;
+    max-width: 800px;
+}
+
+.contact-section {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 2em;
+    border-radius: 8px;
+    text-align: center; /* Centers the title and other content */
+}
+
+/* Add background to the form and social buttons together */
+.contact-content {
+    padding: 2em; /* Padding around the content */
+    background-color: rgba(249, 249, 249, 0.9); /* Light background */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.centered-text {
+    text-align: center;
+}
+
+/* Social Button Styles */
+.social-buttons {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
